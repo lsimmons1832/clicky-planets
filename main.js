@@ -36,17 +36,18 @@ var planets = [
 	name: "Neptune",
 	url: ""
 },
-]
+];
 
 
 
 function writeToDOM() {
 	//planetHolderDiv.innerHTML = "Mars";
 
-	var str = "";
+	
 	for (var i = 0; i < planets.length; i++) {
-		planetHolderDiv.innerHTML += '<div class="planetName">' + planets[i].name + '</div>'; //u can remove all '' quotes and put tick marks on the end
-		//JavaScript string templating E5 = planetHolderDiv.innerHTML += `<div class="planetName"> + ${planets[i].name} + </div>`
+		var newPlanet = "";
+		 newPlanet += `<div class="planetName"> ${planets[i].name} </div>`; 
+		 planetHolderDiv.innerHTML += newPlanet;
 	}
 }
 
