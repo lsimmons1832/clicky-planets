@@ -47,13 +47,27 @@ planetHolderDiv.innerHTML = "";
 	for (var i = 0; i < planets.length; i++) {
 		 var newPlanet = "";
 		 newPlanet += `<div class="planetBox" id="planetBox-${i}">`
-		 newPlanet += `<div class="planetName"> ${planets[i].name} </div>`; 
+		 newPlanet += `<div class="planetName hidden"> ${planets[i].name} </div>`; 
 		 newPlanet += `<img class= "planetImage" src="${planets[i].url}">`
 		 newPlanet += `</div>`
 		 planetHolderDiv.innerHTML += newPlanet;
 	}
 }
-
+function showMeTheMoney(event){
+	if (event.target.className === 'planetImage'){
+	console.log("event worked", event);
+	// console.log("unique ID", event.target.parentNode.id);
+	console.log("text?", event.target.previousSibling);
+	event.target.previousSibling.classList.remove('hidden');
+	}
+}
 
 button.addEventListener("click", writeToDOM);
 button.addEventListener("mouseenter", writeToDOM); //makes enter key behave like a click
+
+//console.log("planetBoxes", planetBoxes);
+document.body.addEventListener("click", showMeTheMoney)//add click event that removes hidden class from css
+
+//make second click remove words
+
+//hide images on click
