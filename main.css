@@ -28,3 +28,26 @@ background-color: #f5f5f5;
   background-image: linear-gradient(to bottom, #5b4f73, #abc9de);
   text-decoration: none;
 }
+
+.planetBox {
+	border: solid black 2px;
+	display: inline-block;
+	height: 300px;
+	width: 300px;
+	margin: 20px;
+}
+
+.planetName {
+	color: darkgray;
+	text-align: center;
+	font-size: 40px;
+	font-weight: 800;
+	position: absolute;
+	margin-top: 128px;
+	width: inherit;
+}
+
+.planetImage{
+	height: 300px;
+	width: 300px;
+}
